@@ -1,0 +1,47 @@
+.confidence {
+  @include fluid(margin-top, 56px, 104px);
+  @include fluid(margin-bottom, 56px, 104px);
+
+  &__inner {
+    position: relative;
+  }
+
+  &__swiper {
+    width: 85%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px auto;
+    @include fluid(padding-top, 48px, 52px);
+    padding-bottom: 32px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+
+    &-title {
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    &-img {
+      margin-left: auto;
+      margin-right: auto;
+      height: 88px;
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .confidence {
+    &__swiper {
+      width: 100%;
+      overflow: visible;
+    }
+  }
+}

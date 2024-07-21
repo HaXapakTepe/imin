@@ -1,0 +1,71 @@
+.check {
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+}
+
+.label {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 8px;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+
+  a {
+    color: #8c989f;
+  }
+
+  span {
+    color: #919191;
+  }
+
+  &__input {
+    &:checked+.label__inputCustom {
+      background-color: #002C5A;
+
+      .label__inputCustom-icon {
+        visibility: visible;
+      }
+    }
+  }
+
+  &__inputCustom {
+    position: relative;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    border: 1px solid #C7C7C7;
+    background-color: #fff;
+    transition: background-color 0.23s ease-in-out;
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 13px;
+      visibility: hidden;
+      transition: visibility 0.23s ease-in-out;
+
+      svg {
+        path {
+          transition: stroke 0.23s ease-in-out;
+        }
+      }
+    }
+  }
+}

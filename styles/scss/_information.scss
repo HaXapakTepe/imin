@@ -1,0 +1,30 @@
+.information {
+  @include fluid(margin-top, 56px, 104px);
+  @include fluid(margin-bottom, 56px, 104px);
+  background-color: #003F80;
+  @include fluid(padding-top, 24px, 32px);
+  @include fluid(padding-bottom, 24px, 48px);
+
+  &__title {
+    max-width: 970px;
+    margin-left: auto;
+    margin-right: auto;
+    @include fluid(font-size, 24px, 32px);
+    font-weight: 700;
+    text-align: center;
+    text-wrap: balance;
+    color: #fff;
+    @include fluid(margin-bottom, 16px, 24px);
+  }
+
+  &__text {
+    max-width: 810px;
+    margin-left: auto;
+    margin-right: auto;
+    @include fluid(font-size, 18px, 24px);
+    text-align: center;
+    text-wrap: balance;
+    color: #fff;
+    @include fluid(margin-bottom, 24px, 32px);
+  }
+}

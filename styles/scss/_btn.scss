@@ -1,0 +1,58 @@
+.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 32px;
+  color: #fff;
+  font-size: 16px;
+  background-color: #99CB32;
+  border-radius: 10px;
+  transition: background-color 0.23s ease-in-out,
+    color 0.23s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #7DAF14;
+  }
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--fw {
+    font-weight: 700;
+  }
+
+  &--pink {
+    padding: 10px 32px;
+    background-color: #EF5D87;
+
+    &:hover {
+      background-color: #EE4777;
+    }
+  }
+
+  &--blue {
+
+    background-color: #003F80;
+
+    &:hover {
+      background-color: #002C5A;
+    }
+  }
+
+  &--gray {
+    border-radius: 3px;
+    background-color: #787A7D;
+    color: #000;
+
+    &:hover {
+      background-color: #57595c;
+      color: #000;
+    }
+  }
+}

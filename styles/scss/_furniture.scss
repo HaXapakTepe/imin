@@ -1,0 +1,45 @@
+.furniture {
+  @include fluid(margin-top, 30px, 64px);
+  @include fluid(margin-bottom, 56px, 104px);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    @include fluid(row-gap, 16px, 56px);
+    @include fluid(column-gap, 16px, 24px);
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #E7E7E7;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+
+    &:hover {
+      .furniture__link-title {
+        color: #EF5D87;
+      }
+    }
+
+    &-img {
+      margin-top: auto;
+      margin-bottom: auto;
+      max-height: 231px;
+    }
+
+    &-title {
+      @include fluid(font-size, 20px, 24px);
+      font-weight: 700;
+      text-wrap: balance;
+      text-align: center;
+      color: #000;
+      transition: color 0.23s ease-in-out;
+    }
+  }
+}

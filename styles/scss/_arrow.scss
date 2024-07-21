@@ -1,0 +1,125 @@
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @include fluid(gap, 12px, 16px);
+  @include fluid(height, 35px, 48px);
+  z-index: 10;
+  pointer-events: none;
+
+  &--alt {
+    .arrow {
+
+      &__next,
+      &__prev {
+        background-color: #BDBDBD;
+      }
+
+      &__prev {
+        &::before {
+          background-image: url('../../assets/images/icons/arrow-left-swiper-white.svg');
+        }
+      }
+    
+      &__next {
+        &::before {
+          background-image: url('../../assets/images/icons/arrow-right-swiper-white.svg');
+        }
+      }
+    }
+  }
+
+  &__next,
+  &__prev {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    transition: background-color 0.23s ease-in-out, opacity 0.23s ease-in-out, border .23s ease-in-out;
+    border-radius: 50%;
+    right: unset;
+    left: unset;
+    margin-top: unset;
+    top: unset;
+    background-color: #fff;
+    pointer-events: auto;
+
+    &:hover {
+      background-color: #02a7e0;
+    }
+
+    &::after {
+      content: none;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 12px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &.swiper-button-lock {
+      display: none;
+    }
+  }
+
+  &__prev {
+    &::before {
+      background-image: url('../../assets/images/icons/arrow-left-swiper.svg');
+    }
+  }
+
+  &__next {
+    &::before {
+      background-image: url('../../assets/images/icons/arrow-right-swiper.svg');
+    }
+  }
+
+  &--slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 99%;
+    justify-content: space-between;
+    z-index: 11;
+    pointer-events: none;
+
+    .arrow {
+
+      &__prev,
+      &__next {
+        border-color: #BDBDBD;
+        background-color: rgba(255, 255, 255, 0.8);
+        pointer-events: auto;
+
+        &:hover {
+          background-color: #FAB700;
+          border-color: #FAB700;
+        }
+
+        &.swiper-button-disabled {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .arrow {
+    display: none;
+  }
+}

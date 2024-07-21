@@ -1,0 +1,7 @@
+.logo {
+  &__img {
+    @include fluid(height, 50px, 63px);
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+}

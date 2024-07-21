@@ -1,0 +1,146 @@
+.header {
+  &__top {
+    background-color: #003F80;
+
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+
+    &--center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-link {
+      font-size: 14px;
+      color: #fff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__tel {
+    font-weight: 600;
+    @include fluid(font-size, 16px, 23px);
+    transition: color .23s ease-in-out;
+    color: #F13C6E;
+    margin-left: auto;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    color: #fff;
+  }
+
+  &__link {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 14px;
+    color: #0A8FCB;
+    transition: color .23s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__inner {
+    &-box {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__contacts {
+    display: none;
+    color: #fff;
+  }
+
+  &__city {
+    margin-top: 20px;
+
+    &-inner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 10px;
+    }
+
+    &-text {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    &-link {
+      font-size: 14px;
+      font-weight: 700;
+      color: #02a7e0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media(max-width:992px) {
+  .header {
+    &__inner {
+      background-color: #F7F8FA;
+
+      &-box {
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-right: 90px;
+      }
+    }
+
+    .btn,
+    &__phone,
+    &__box {
+      display: none;
+    }
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+    }
+
+    &__city {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.advantages {
+  @include fluid(margin-top, 56px, 104px);
+  @include fluid(margin-bottom, 56px, 104px);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  &__item {
+    padding: 32px 24px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #E7E7E7;
+
+    &-icon {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    &-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  .advantages {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-text,
+      &-title {
+        text-align: center;
+        text-wrap: balance;
+      }
+    }
+  }
+}

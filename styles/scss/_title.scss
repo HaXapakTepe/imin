@@ -1,0 +1,11 @@
+.title {
+  @include fluid(font-size, 24px, 48px);
+  @include fluid(margin-bottom, 32px, 56px);
+  font-weight: 400;
+}
+
+@media (max-width:992px) {
+  .title {
+    font-weight: 700;
+  }
+}

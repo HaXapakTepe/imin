@@ -1,0 +1,29 @@
+.awards {
+  @include fluid(margin-top, 56px, 104px);
+  @include fluid(margin-bottom, 56px, 104px);
+
+  &__inner {
+    position: relative;
+  }
+
+  &__swiper {
+    width: 85%;
+
+    &-img {
+      width: 100%;
+      height: 317px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width:992px) {
+  .awards {
+    &__swiper {
+      width: 100%;
+      overflow: visible;
+    }
+  }
+}

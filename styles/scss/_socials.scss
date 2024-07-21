@@ -1,0 +1,20 @@
+.socials {
+  display: flex;
+  @include fluid(gap, 12px, 20px);
+
+  &__icon {
+    svg {
+      path {
+        transition: fill .23s ease-in-out;
+      }
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

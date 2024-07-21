@@ -1,0 +1,54 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  @include fluid(gap, 10px, 15px);
+
+  .label {
+    margin-right: 0;
+
+    span {
+      font-size: 13px;
+      color: #8c989f;
+    }
+    
+    &__inputCustom {
+      width: 16px;
+      height: 16px;
+      min-width: 16px;
+
+      &-icon {
+        width: 10px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__input {
+    background: transparent;
+    border: 1px solid #363c42;
+    color: #8c989f;
+    border-radius: 3px;
+    padding: 6px;
+    font-size: 14px;
+
+    &::-webkit-input-placeholder {
+      color: #8c989f;
+    }
+
+    &::-moz-placeholder {
+      color: #8c989f;
+    }
+
+    &:-ms-input-placeholder {
+      color: #8c989f;
+    }
+
+    &::-ms-input-placeholder {
+      color: #8c989f;
+    }
+
+    &::placeholder {
+      color: #8c989f;
+    }
+  }
+}

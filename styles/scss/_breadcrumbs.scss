@@ -1,0 +1,45 @@
+.breadcrumbs {
+  @include fluid(margin-top, 25px, 40px);
+  @include fluid(margin-bottom, 30px, 50px);
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    overflow: auto;
+
+    &-item {
+      display: flex;
+      gap: 3px;
+      &:first-child {
+        .breadcrumbs__list-link {
+          font-weight: 700;
+          color: #EF5D87;
+        }
+      }
+
+      &:not(:first-child) {
+        &::before {
+          content: '/';
+          font-size: 14px;
+          color: #666;
+        }
+      }
+
+      &:last-child {
+        pointer-events: none;
+      }
+    }
+
+    &-link {
+      font-size: 14px;
+      color: #666;
+      white-space: nowrap;
+      transition: color .23s ease-in-out;
+
+      &:hover {
+        color: #EF5D87;
+      }
+    }
+  }
+}
