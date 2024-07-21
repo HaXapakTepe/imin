@@ -36,14 +36,16 @@ $(document).ready(function () {
 	})
 	document.addEventListener('click', clickOutsideMenu)
 
-	if (innerWidth < 993) {
-		filterOpen.addEventListener('click', () => {
-			filter.classList.add('filter--active')
-		})
+	if (filter) {
+		if (innerWidth < 993) {
+			filterOpen.addEventListener('click', () => {
+				filter.classList.add('filter--active')
+			})
 
-		filterClose.addEventListener('click', () => {
-			filter.classList.remove('filter--active')
-		})
+			filterClose.addEventListener('click', () => {
+				filter.classList.remove('filter--active')
+			})
+		}
 	}
 
 	accordion?.forEach(acc => {
@@ -84,7 +86,7 @@ $(document).ready(function () {
 	if (innerWidth < 992) {
 		const dropdownItems = document.querySelectorAll('.dropdown__item')
 
-		dropdownItems.forEach(item => {
+		dropdownItems?.forEach(item => {
 			item.addEventListener('click', e => {
 				e.preventDefault()
 				const content = item.querySelector('.dropdown__hidden')
@@ -107,22 +109,22 @@ $(document).ready(function () {
 		})
 	}
 
-	contacts.addEventListener('click', () => {
+	contacts?.addEventListener('click', () => {
 		contactsModal.classList.add('contactsModal--active')
 		clickOutsideMenu
 	})
 
-	contactsModalClose.addEventListener('click', () => {
+	contactsModalClose?.addEventListener('click', () => {
 		contactsModal.classList.remove('contactsModal--active')
 	})
 
-	links.forEach(link => {
+	links?.forEach(link => {
 		link.addEventListener('click', () => {
 			contactsModal.classList.remove('contactsModal--active')
 		})
 	})
 
-	chairsItem.forEach(item => {
+	chairsItem?.forEach(item => {
 		item.addEventListener('click', function () {
 			chairsItem.forEach(item => {
 				item.classList.remove('chairs__sorting-item--active')
@@ -276,9 +278,9 @@ $(document).ready(function () {
 				},
 				993: {
 					slidesPerView: 6,
-          grid: {
-            rows: 1,
-          },
+					grid: {
+						rows: 1,
+					},
 				},
 				769: {
 					slidesPerView: 5,
