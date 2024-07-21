@@ -269,9 +269,6 @@ $(document).ready(function () {
 		const partnersSwiper = new Swiper('.partners__swiper', {
 			slidesPerView: 7,
 			spaceBetween: 24,
-			grid: {
-				rows: 2,
-			},
 			breakpoints: {
 				1366: {
 					slidesPerView: 7,
@@ -279,8 +276,8 @@ $(document).ready(function () {
 				993: {
 					slidesPerView: 6,
 					grid: {
-						rows: 1,
-					},
+            rows: 2,
+          },
 				},
 				769: {
 					slidesPerView: 5,
@@ -293,6 +290,9 @@ $(document).ready(function () {
 				},
 				320: {
 					slidesPerView: 2.1,
+          grid: {
+						rows: 1,
+					},
 				},
 			},
 		})
