@@ -14,6 +14,20 @@ $(document).ready(function () {
 	const pages = document.querySelectorAll('.tab__info')
 	const accordion = document.querySelectorAll('.accordion')
 
+	let ok = false
+	window.addEventListener('scroll', function () {
+		if (ok === false) {
+			ok = true
+			setTimeout(() => {
+				let iframe = document.createElement('iframe')
+				iframe.src =
+					'https://kuula.co/share/collection/7qfjk?logo=0&info=0&fs=1&vr=0&zoom=1&thumbs=0&inst=en'
+				iframe.classList.add('projects__iframe')
+				document.getElementById('kuula').replaceWith(iframe)
+			}, 3000)
+		}
+	})
+
 	Fancybox.bind('[data-fancybox]', {})
 
 	const toggleMenu = () => {
@@ -67,15 +81,13 @@ $(document).ready(function () {
 		const dropdown = document.querySelectorAll('.dropdown__item')
 
 		dropdown?.forEach(acc => {
-			acc.addEventListener('mouseover', e => {
-				e.preventDefault()
+			acc.addEventListener('mouseover', () => {
 				const content = acc.querySelector('.dropdown__hidden')
 				acc.classList.add('dropdown__hidden--active')
 				content.style.maxHeight = content.scrollHeight + 'px'
 			})
 
-			acc.addEventListener('mouseleave', e => {
-				e.preventDefault()
+			acc.addEventListener('mouseleave', () => {
 				const content = acc.querySelector('.dropdown__hidden')
 				acc.classList.remove('dropdown__hidden--active')
 				content.style.maxHeight = '0'
@@ -87,8 +99,7 @@ $(document).ready(function () {
 		const dropdownItems = document.querySelectorAll('.dropdown__item')
 
 		dropdownItems?.forEach(item => {
-			item.addEventListener('click', e => {
-				e.preventDefault()
+			item.addEventListener('click', () => {
 				const content = item.querySelector('.dropdown__hidden')
 
 				dropdownItems.forEach(otherItem => {
@@ -138,6 +149,18 @@ $(document).ready(function () {
 		const $parent = $select.closest('.filter__item-select')
 		$select.select2({
 			dropdownParent: $parent,
+		})
+	})
+
+	const dropdownParents = [
+		$('.filter__items-select--one'),
+		$('.filter__items-select--two'),
+		$('.filter__items-select--three'),
+	]
+
+	dropdownParents.forEach(parent => {
+		$('.filter__sorting').select2({
+			dropdownParent: parent,
 		})
 	})
 
@@ -276,8 +299,8 @@ $(document).ready(function () {
 				993: {
 					slidesPerView: 6,
 					grid: {
-            rows: 2,
-          },
+						rows: 2,
+					},
 				},
 				769: {
 					slidesPerView: 5,
@@ -290,7 +313,7 @@ $(document).ready(function () {
 				},
 				320: {
 					slidesPerView: 2.1,
-          grid: {
+					grid: {
 						rows: 1,
 					},
 				},

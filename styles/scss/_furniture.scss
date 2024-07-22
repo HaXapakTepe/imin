@@ -34,7 +34,7 @@
     }
 
     &-title {
-      @include fluid(font-size, 20px, 24px);
+      @include fluid(font-size, 18px, 24px);
       font-weight: 700;
       text-wrap: balance;
       text-align: center;

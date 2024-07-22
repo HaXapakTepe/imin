@@ -128,11 +128,26 @@
                   <a class="menu__link" href="#">
                     О нас
                   </a>
+                  <div class="menu__dropdown">
+                    <a class="menu__dropdown-link" href="#">О нас</a>
+                    <a class="menu__dropdown-link" href="#">Награды и дипломы</a>
+                    <a class="menu__dropdown-link" href="#">Наши клиенты</a>
+                    <a class="menu__dropdown-link" href="#">Фото салонов</a>
+                    <a class="menu__dropdown-link" href="#">Фильм о компании</a>
+                    <a class="menu__dropdown-link" href="#">Реквизиты</a>
+                  </div>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link menu__link--accent" href="#">
                     Скидки и акции
                   </a>
+                  <div class="menu__dropdown">
+                    <a class="menu__dropdown-link" href="#">Акции</a>
+                    <a class="menu__dropdown-link" href="#">Скидки от суммы заказа</a>
+                    <a class="menu__dropdown-link" href="#">Спецпредложения</a>
+                    <a class="menu__dropdown-link" href="#">Распродажа</a>
+                    <a class="menu__dropdown-link" href="#">Товары дня</a>
+                  </div>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="#">
@@ -143,6 +158,39 @@
                   <a class="menu__link" href="#">
                     Помощь
                   </a>
+                  <div class="menu__dropdown menu__dropdown--grid">
+                    <div class="menu__dropdown-box">
+                      <p class="menu__dropdown-title">Как сделать заказ</p>
+                      <a class="menu__dropdown-link" href="#">Заказ с сайта</a>
+                      <a class="menu__dropdown-link" href="#">Заказ по телефону</a>
+                      <a class="menu__dropdown-link" href="#">Заказ по электронной почте</a>
+                    </div>
+                    <div class="menu__dropdown-box">
+                      <p class="menu__dropdown-title">Доставка и получение</p>
+                      <a class="menu__dropdown-link" href="#">Доставка почтой и транспортной компанией</a>
+                      <a class="menu__dropdown-link" href="#">Адреса и контакты пунктов самовывоза</a>
+                      <a class="menu__dropdown-link" href="#">Доставка силами поставщика</a>
+                    </div>
+                    <div class="menu__dropdown-box">
+                      <p class="menu__dropdown-title">Способы оплаты</p>
+                      <a class="menu__dropdown-link" href="#">Безналичная оплата</a>
+                      <a class="menu__dropdown-link" href="#">Оплата Он-лайн Банкингом</a>
+                      <a class="menu__dropdown-link" href="#">Оплата при получении</a>
+                      <a class="menu__dropdown-link" href="#">Оплата в офисе компании</a>
+                      <a class="menu__dropdown-link" href="#">Оплата в кредит</a>
+                      <a class="menu__dropdown-link" href="#">Скидки при оплате</a>
+                    </div>
+                    <div class="menu__dropdown-box">
+                      <p class="menu__dropdown-title">Гарантированная поддержка и сервис</p>
+                      <a class="menu__dropdown-link" href="#">Негарантийный ремонт оборудования</a>
+                      <a class="menu__dropdown-link" href="#">Возврат товаров</a>
+                      <a class="menu__dropdown-link" href="#">Подбор материалов и консультация</a>
+                      <a class="menu__dropdown-link" href="#">Гарантийный ремонт и условия</a>
+                    </div>
+                    <div class="menu__dropdown-box">
+                      <p class="menu__dropdown-title">Ремонт косметологического оборудования и аппаратов</p>
+                    </div>
+                  </div>
                 </li>
                 <li class="menu__item">
                   <a class="menu__link" href="#">
@@ -662,7 +710,7 @@
                   <p class="filter__items-title">
                     Сортировка
                   </p>
-                  <div class="filter__items-select">
+                  <div class="filter__items-select filter__items-select--one">
                     <select class="filter__sorting" name="one">
                       <option value="По алфавиту">По алфавиту</option>
                       <option value="По алфавиту1">По алфавиту1</option>
@@ -670,7 +718,7 @@
                       <option value="По алфавиту3">По алфавиту3</option>
                     </select>
                   </div>
-                  <div class="filter__items-select">
+                  <div class="filter__items-select filter__items-select--two">
                     <select class="filter__sorting" name="two">
                       <option value="Механизм">Механизм</option>
                       <option value="Механизм1">Механизм1</option>
@@ -678,7 +726,7 @@
                       <option value="Механизм3">Механизм3</option>
                     </select>
                   </div>
-                  <div class="filter__items-select">
+                  <div class="filter__items-select filter__items-select--three">
                     <select class="filter__sorting" name="three">
                       <option value="Производитель">Производитель</option>
                       <option value="Производитель1">Производитель1</option>
@@ -1675,11 +1723,10 @@
 
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="https://unpkg.com/imask"></script>
   <script src="./scripts/scripts.js"></script>
 </body>
 
