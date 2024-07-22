@@ -1,5 +1,5 @@
 .title {
-  @include fluid(font-size, 24px, 48px);
+  @include fluid(font-size, 18px, 48px);
   @include fluid(margin-bottom, 32px, 56px);
   font-weight: 400;
 }

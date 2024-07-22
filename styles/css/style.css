@@ -1191,13 +1191,13 @@ body.no-scroll {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 32px;
   font-weight: 400;
 }
 @media (min-width: 992px) {
   .title {
-    font-size: calc(0.025862069 * 100vw + -1.6551724138px);
+    font-size: calc(0.0323275862 * 100vw + -14.0689655172px);
   }
 }
 @media (min-width: 1920px) {
