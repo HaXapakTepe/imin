@@ -209,6 +209,12 @@
     &__inner {
       grid-template-columns: 1fr;
     }
+
+    &__items {
+      &-box {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   }
 }
 
@@ -217,6 +223,22 @@
     &__item {
       &-img {
         height: 364px;
+      }
+    }
+
+    &__items {
+      &-box {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media(max-width:576px) {
+  .chairs {
+    &__items {
+      &-box {
+        grid-template-columns: 1fr;
       }
     }
   }
