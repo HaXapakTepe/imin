@@ -513,11 +513,21 @@ body.no-scroll {
   gap: 8px;
   padding: 17px 32px;
   color: #fff;
-  font-size: 16px;
+  font-size: 12px;
   background-color: #99CB32;
   border-radius: 10px;
   transition: background-color 0.23s ease-in-out, color 0.23s ease-in-out;
   cursor: pointer;
+}
+@media (min-width: 992px) {
+  .btn {
+    font-size: calc(0.0043103448 * 100vw + 7.724137931px);
+  }
+}
+@media (min-width: 1920px) {
+  .btn {
+    font-size: 16px;
+  }
 }
 .btn:hover {
   background-color: #7DAF14;
