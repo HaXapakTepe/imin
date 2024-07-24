@@ -14,19 +14,21 @@ $(document).ready(function () {
 	const pages = document.querySelectorAll('.tab__info')
 	const accordion = document.querySelectorAll('.accordion')
 
-	let ok = false
-	window.addEventListener('scroll', function () {
-		if (ok === false) {
-			ok = true
-			setTimeout(() => {
-				let iframe = document.createElement('iframe')
-				iframe.src =
-					'https://kuula.co/share/collection/7qfjk?logo=0&info=0&fs=1&vr=0&zoom=1&thumbs=0&inst=en'
-				iframe.classList.add('projects__iframe')
-				document.getElementById('kuula').replaceWith(iframe)
-			}, 3000)
-		}
-	})
+	if (document.querySelector('.projects')) {
+		let ok = false
+		window.addEventListener('scroll', function () {
+			if (ok === false) {
+				ok = true
+				setTimeout(() => {
+					let iframe = document.createElement('iframe')
+					iframe.src =
+						'https://kuula.co/share/collection/7qfjk?logo=0&info=0&fs=1&vr=0&zoom=1&thumbs=0&inst=en'
+					iframe.classList.add('projects__iframe')
+					document.getElementById('kuula').replaceWith(iframe)
+				}, 3000)
+			}
+		})
+	}
 
 	Fancybox.bind('[data-fancybox]', {})
 

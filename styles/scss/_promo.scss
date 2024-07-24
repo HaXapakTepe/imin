@@ -2,51 +2,21 @@
   @include fluid(margin-top, 20px, 40px);
   @include fluid(margin-bottom, 25px, 40px);
 
-  &__inner {
-    position: relative;
-    @include fluid(padding-top, 40px, 56px);
-    @include fluid(padding-bottom, 40px, 59px);
-    @include fluid(padding-left, 10px, 40px);
-    @include fluid(padding-right, 10px, 40px);
+  &__link {
+    display: block;
+    height: 430px;
   }
 
   &__img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    z-index: -1;
 
     img {
       width: 100%;
       height: 100%;
-      -o-object-fit: cover;
-      object-fit: cover;
-      -o-object-position: right;
-      object-position: right
-    }
-  }
-
-  &__box {
-    @include fluid(max-width, 380px, 750px);
-    display: flex;
-    flex-direction: column;
-    @include fluid(gap, 16px, 24px);
-
-    &-title {
-      @include fluid(font-size, 24px, 48px);
-      font-weight: 700;
-      color: #EF5D87;
-      line-height: 1.2;
-    }
-
-    &-text {
-      @include fluid(max-width, 250px, 550px);
-      margin-bottom: 8px;
-      @include fluid(font-size, 16px, 32px);
-      color: #EF5D87;
-      line-height: 1.2;
+      -o-object-position: left;
+      object-position: left
     }
   }
 }
@@ -61,24 +31,6 @@
       padding: 40px 0 400px;
     }
 
-    &__box {
-      margin-left: auto;
-      margin-right: auto;
-
-      &-title,
-      &-text {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        text-wrap: balance;
-      }
-
-      .btn {
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
     &__img {
       img {
         -o-object-position: bottom;
@@ -90,15 +42,16 @@
 
 @media(max-width: 768px) {
   .promo {
-    &__inner {
-      padding-bottom: 400px;
+    &__link {
+      height: 280px;
     }
+  }
+}
 
-    &__img {
-      img {
-        -o-object-position: bottom;
-        object-position: bottom;
-      }
+@media(max-width: 576px) {
+  .promo {
+    &__link {
+      height: 640px;
     }
   }
 }
