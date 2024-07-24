@@ -1,0 +1,68 @@
+.callModal {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  padding: 20px 15px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  width: 250px;
+  background-color: #fff;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.23s ease-in-out, visibility 0.23s ease-in-out, z-index 0.23s ease-in-out;
+
+  &.active {
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+  }
+
+  &__title {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__text {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    border: 1px solid #d7dade;
+    border-radius: 3px;
+    background-clip: padding-box;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  &__checkbox {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+
+    a {
+      color: #2ba6cb;
+    }
+  }
+
+  .btn {
+    padding: 10px 32px;
+    background-color: #003F80;
+
+    &:hover {
+      background-color: #002C5A;
+    }
+  }
+}

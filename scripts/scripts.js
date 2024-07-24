@@ -13,6 +13,26 @@ $(document).ready(function () {
 	const tabs = document.querySelectorAll('.tab__target')
 	const pages = document.querySelectorAll('.tab__info')
 	const accordion = document.querySelectorAll('.accordion')
+	const callModalOpen = document.querySelector('.callModal-open')
+	const callModal = document.querySelector('.callModal')
+	const buyModal = document.querySelector('.buyModal')
+	const callModalClose = buyModal?.querySelector('.buyModal__close')
+	const chairs = document.querySelector('.chairs')
+	const btns = chairs?.querySelectorAll('.btn--blue')
+
+	btns?.forEach(btn => {
+		btn.addEventListener('click', () => {
+			buyModal.classList.add('active')
+		})
+	})
+
+	callModalClose?.addEventListener('click', () => {
+		buyModal.classList.remove('active')
+	})
+
+	callModalOpen?.addEventListener('click', () => {
+		callModal.classList.toggle('active')
+	})
 
 	if (document.querySelector('.projects')) {
 		let ok = false
@@ -24,10 +44,18 @@ $(document).ready(function () {
 					iframe.src =
 						'https://kuula.co/share/collection/7qfjk?logo=0&info=0&fs=1&vr=0&zoom=1&thumbs=0&inst=en'
 					iframe.classList.add('projects__iframe')
-					document.getElementById('kuula').replaceWith(iframe)
+					document.getElementById('kuula')?.replaceWith(iframe)
 				}, 3000)
 			}
 		})
+	}
+
+	if (document.querySelector('[name="phone"]')) {
+		const element = document.querySelector('[name="phone"]')
+		const maskOptions = {
+			mask: '+{7} 000 000 00 00',
+		}
+		const mask = IMask(element, maskOptions)
 	}
 
 	Fancybox.bind('[data-fancybox]', {})

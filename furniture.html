@@ -86,9 +86,43 @@
                   <a class="header__phone-link" href="tel:+74959801173">495 980 11 73</a>
                 </div>
               </div>
-              <button class="btn btn--pink">
-                Перезвонить
-              </button>
+              <div class="header__block-box">
+                <button class="btn btn--pink callModal-open">
+                  Перезвонить
+                </button>
+                <form class="callModal" action="" method="post">
+                  <p class="callModal__title">Имя</p>
+                  <input class="callModal__input" name="name" type="text" required>
+                  <p class="callModal__title">Телефон</p>
+                  <input class="callModal__input" name="phone" type="text" required>
+                  <p class="callModal__title">В какое время</p>
+                  <p class="callModal__text">По рабочим дням с 9:00 до 18:00</p>
+                  <label class="callModal__box">
+                    <input class="callModal__box-input" type="radio" name="radio" checked>
+                    Как можно скорее
+                  </label>
+                  <label class="callModal__box">
+                    <input class="callModal__box-input" type="radio" name="radio">
+                    До обеда
+                  </label>
+                  <label class="callModal__box">
+                    <input class="callModal__box-input" type="radio" name="radio">
+                    После обеда
+                  </label>
+                  <label class="callModal__box">
+                    <input class="callModal__box-input" type="radio" name="radio">
+                    Вечером
+                  </label>
+                  <label class="callModal__checkbox">
+                    <input class="callModal__box-input" type="checkbox" name="checkbox" required>
+                    Нажимая на кнопку "Жду звонка", я даю
+                    <a href="#">согласие на обработку персональных данных.</a>
+                  </label>
+                  <button class="btn">
+                    Жду звонка
+                  </button>
+                </form>
+              </div>
               <div class="header__contacts">
                 Контакты
                 <i class="header__contacts-icon">
@@ -160,7 +194,7 @@
             <a class="header__tel" href="tel:89319726482">
               8 (931) 972-64-82
             </a>
-            <form class="search" action="">
+            <form class="search" action="" method="post">
               <label class="search__label">
                 <input class="search__input" type="text" placeholder="Поиск" />
                 <i class="search__icon">
@@ -1729,7 +1763,7 @@
           <div class="footer__item">
             <p class="footer__item-title">Рассылка</p>
             <p class="footer__item-text">Подпишитесь на обновления Имидж Инвентор</p>
-            <form class="form" action="">
+            <form class="form" action="" method="post">
               <input class="form__input" type="email" placeholder="E-mail" required>
               <label class="label">
                 <input class="label__input check" name="" type="checkbox" required />
@@ -1756,12 +1790,34 @@
       </div>
     </footer>
 
+    <form class="buyModal" action="" method="post">
+      <div class="buyModal__inner">
+        <div class="buyModal__close"></div>
+        <p class="buyModal__title">
+          Купить Кресло парикмахерское <span>Название</span> гидравлическое
+        </p>
+        <p class="buyModal__text">
+          Чтобы оформить заказ, заполните форму. В течение пары часов с вами свяжется менеджер и уточнит детали заказа,
+          а
+          также время доставки.
+        </p>
+        <p class="buyModal__subtitle">
+          Контактные данные
+        </p>
+        <input class="buyModal__input" type="email" placeholder="E-mail" required>
+        <input class="buyModal__input" type="name" placeholder="ФИО" required>
+        <input class="buyModal__input" type="phone" placeholder="Телефон" required>
+        <button class="btn">Отправить заказ</button>
+      </div>
+    </form>
+
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="https://unpkg.com/imask"></script>
   <script src="./scripts/scripts.js"></script>
 </body>
 
