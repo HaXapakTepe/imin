@@ -18,6 +18,12 @@
   }
 }
 
+@media(max-width: 992px) {
+  .promo {
+    margin-top: 0
+  }
+}
+
 @media(max-width: 768px) {
   .promo {
     .container {
